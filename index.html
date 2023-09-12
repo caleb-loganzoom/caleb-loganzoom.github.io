@@ -14,7 +14,7 @@ function makeCall() {
   document.querySelector('iframe#zoom-embeddable-phone-iframe').contentWindow.postMessage({
                     type: 'zp-make-call',
                     data: {
-                        number: 8167146002
+                        number: +18167146002
                         //callerId: <outgoing caller id, optional field>
                     }
                 }, 'https://applications.zoom.us');
