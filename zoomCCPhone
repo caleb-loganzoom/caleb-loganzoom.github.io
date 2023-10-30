@@ -1,29 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zoom Contact Center Smart Embed</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-        
-    </main>
-	<iframe
-    src="https://zoom.us/crm-int/callbar/"
-    sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-scripts allow-same-origin allow-downloads"
-    allow="geolocation;autoplay;microphone;camera;display-capture;midi;encrypted-media;clipboard-write;"
-    id="zoom-embeddable-phone-iframe"
-></iframe>
+<!doctype html>
+<html>
+<head>
+<title>Testing Zoom CC Smart Embed Phone</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+<body>
+   <iframe src="https://zoom.us/crm-int/callbar/" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-scripts allow-same-origin allow-downloads" allow="geolocation;autoplay;microphone;camera;display-capture;midi;encrypted-media;clipboard-write;" id="zoom-embeddable-phone-iframe"></iframe>
 <style>
 #zoom-embeddable-phone-iframe {
     height: 700px;
     width: 840px;  
 }
 </style>
-  </body>
+</body>
 </html>
