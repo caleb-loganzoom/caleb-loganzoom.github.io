@@ -11,7 +11,9 @@
   <body>
     <main>
         <h1>Welcome to My Website</h1>  
-        <iframe
+        
+    </main>
+	<iframe
     src="https://zoom.us/crm-int/callbar/"
     sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-scripts allow-same-origin allow-downloads"
     allow="geolocation;autoplay;microphone;camera;display-capture;midi;encrypted-media;clipboard-write;"
@@ -23,7 +25,5 @@
     width: 840px;  
 }
 </style>
-    </main>
-	<script src="index.js"></script>
   </body>
 </html>
