@@ -18,6 +18,8 @@
  
 <body>
 <script>
+    var config
+    var sessionContainer
  function generateSignature(sdkKey, sdkSecret, sessionName, role) {
 
 const iat = Math.round(new Date().getTime() / 1000) - 30
