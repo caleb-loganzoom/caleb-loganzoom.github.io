@@ -7,6 +7,8 @@
     <title>Page Layout</title>
     <link rel="stylesheet" href="./@zoom/videosdk-ui-toolkit/dist/videosdk-ui-toolkit.css">
     <script src="./@zoom/videosdk-ui-toolkit/index.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.9.0/jsrsasign-all-min.js" ></script>
+    <script src="main.js" type="module"></script>
     <script type="module">
         import uitoolkit from './@zoom/videosdk-ui-toolkit/index.js'
     
@@ -33,7 +35,7 @@
 </head>
  
 <body>
- 
+
   
     <header>
         
@@ -44,7 +46,16 @@
  
     <!-- Body section -->
     <main class="body_sec">
-        <div id='sessionContainer' onload="doThings()"></div>
+        <div id='data'>
+            <form name="vSDKData" action="" method="GET">
+            <label for="fname">Client ID:</label><br>
+            <input type="text" id="clientID" name="fname"><br>
+            <label for="lname">Client Secret:</label><br>
+            <input type="text" id="clientSecret" name="lname"><br><br>
+            <input type="button" name="button" value="Click" onClick="testResults(this.form)">
+        </form>
+        </div>
+        <!-- <div id='sessionContainer' onload="doThings()"></div> -->
     </main>
  
     <!-- Footer Section -->
