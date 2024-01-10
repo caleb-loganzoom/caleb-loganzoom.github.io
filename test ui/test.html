@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Page Layout</title>
+    <link rel="stylesheet" href="./@zoom/videosdk-ui-toolkit/dist/videosdk-ui-toolkit.css">
+    <script src="./@zoom/videosdk-ui-toolkit/index.js" type="module"></script>
+    <script type="module">
+        import uitoolkit from './@zoom/videosdk-ui-toolkit/index.js'
+    
+     var config = {
+     videoSDKJWT: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfa2V5IjoiM0VaWW5STDRtMnNnaUVvY1N2VHY1SHdwbjBQUXo1SzNWQjVLIiwiaWF0IjoxNzA0Mzk4ODE3LCJleHAiOjE3MDQ0MDI0MTcsInRwYyI6IkNvb2wgQ2FycyIsInVzZXJfaWRlbnRpdHkiOiJ1c2VyMTIzIiwic2Vzc2lvbl9rZXkiOiJzZXNzaW9uMTIzIiwicm9sZV90eXBlIjoxfQ.F0Q6I14bbU_9j8jeCzUUalGvSw2h2xd7j2ghOPEhrZg',
+     sessionName: 'SessionA',
+     userName: 'UserA',
+     sessionPasscode: 'abc123',
+     features: ['chat', 'users', 'settings']
+     }
+     var sessionContainer = document.getElementById('sessionContainer')
+     console.log(sessionContainer)
+     console.log("works")
+     console.log(config)
+    
+    
+    
+     
+    uitoolkit.joinSession(sessionContainer, config)
+
+    
+     
+      </script>
+</head>
+ 
+<body>
+ 
+  
+    <header>
+        
+    </header>
+ 
+    
+    
+ 
+    <!-- Body section -->
+    <main class="body_sec">
+        <div id='sessionContainer' onload="doThings()"></div>
+    </main>
+ 
+    <!-- Footer Section -->
+    
+</body>
+ 
+</html>
