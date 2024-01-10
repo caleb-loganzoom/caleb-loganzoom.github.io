@@ -55,7 +55,7 @@ return sdkJWT
     function testResults(form) {
    console.log(generateSignature(form.clientID.value, form.clientSecret.value, 'Test Session', 1))
      config.videoSDKJWT = generateSignature(form.clientID.value, form.clientSecret.value, 'Test Session', 1)
-    window.uitoolkitWindow.joinSession(sessionContainer, config)
+    uitoolkit.joinSession(sessionContainer, config)
 }
 </script>
   
