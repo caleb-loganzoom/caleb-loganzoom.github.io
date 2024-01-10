@@ -1,4 +1,4 @@
-import {KJUR} from  "https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.9.0/jsrsasign-all-min.js"
+var KJUR = require("https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.9.0/jsrsasign-all-min.js")
  
 
 
