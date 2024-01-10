@@ -9,8 +9,8 @@
     <script src="./@zoom/videosdk-ui-toolkit/index.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.9.0/jsrsasign-all-min.js" ></script>
     <script src="main.js" type="module"></script>
-    <script type="module">
-        import uitoolkit from './@zoom/videosdk-ui-toolkit/index.js'
+    <script>
+      
     
      var config = {
      videoSDKJWT: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfa2V5IjoiM0VaWW5STDRtMnNnaUVvY1N2VHY1SHdwbjBQUXo1SzNWQjVLIiwiaWF0IjoxNzA0Mzk4ODE3LCJleHAiOjE3MDQ0MDI0MTcsInRwYyI6IkNvb2wgQ2FycyIsInVzZXJfaWRlbnRpdHkiOiJ1c2VyMTIzIiwic2Vzc2lvbl9rZXkiOiJzZXNzaW9uMTIzIiwicm9sZV90eXBlIjoxfQ.F0Q6I14bbU_9j8jeCzUUalGvSw2h2xd7j2ghOPEhrZg',
@@ -27,7 +27,7 @@
     
     
      
-    uitoolkit.joinSession(sessionContainer, config)
+    window.uitoolkit.joinSession(sessionContainer, config)
 
     
      
