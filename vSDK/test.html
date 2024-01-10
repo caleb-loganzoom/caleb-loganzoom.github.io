@@ -13,25 +13,6 @@
       import uitoolkit from './@zoom/videosdk-ui-toolkit/index.js'
    window.uitoolkitWindow = uitoolkit
     
-     var config = {
-     videoSDKJWT: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfa2V5IjoiM0VaWW5STDRtMnNnaUVvY1N2VHY1SHdwbjBQUXo1SzNWQjVLIiwiaWF0IjoxNzA0Mzk4ODE3LCJleHAiOjE3MDQ0MDI0MTcsInRwYyI6IkNvb2wgQ2FycyIsInVzZXJfaWRlbnRpdHkiOiJ1c2VyMTIzIiwic2Vzc2lvbl9rZXkiOiJzZXNzaW9uMTIzIiwicm9sZV90eXBlIjoxfQ.F0Q6I14bbU_9j8jeCzUUalGvSw2h2xd7j2ghOPEhrZg',
-     sessionName: 'SessionA',
-     userName: 'UserA',
-     sessionPasscode: 'abc123',
-     features: ['chat', 'users', 'settings']
-     }
-     var sessionContainer = document.getElementById('sessionContainer')
-     console.log(sessionContainer)
-     console.log("works")
-     console.log(config)
-    
-    
-    
-     
-    window.uitoolkit.joinSession(sessionContainer, config)
-
-    
-     
       </script>
 </head>
  
@@ -57,9 +38,24 @@ const sPayload = JSON.stringify(oPayload)
 const sdkJWT = window.KJUR.jws.JWS.sign('HS256', sHeader, sPayload, sdkSecret)
 return sdkJWT
 }
+
+ var config = {
+     videoSDKJWT: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfa2V5IjoiM0VaWW5STDRtMnNnaUVvY1N2VHY1SHdwbjBQUXo1SzNWQjVLIiwiaWF0IjoxNzA0Mzk4ODE3LCJleHAiOjE3MDQ0MDI0MTcsInRwYyI6IkNvb2wgQ2FycyIsInVzZXJfaWRlbnRpdHkiOiJ1c2VyMTIzIiwic2Vzc2lvbl9rZXkiOiJzZXNzaW9uMTIzIiwicm9sZV90eXBlIjoxfQ.F0Q6I14bbU_9j8jeCzUUalGvSw2h2xd7j2ghOPEhrZg',
+     sessionName: 'SessionA',
+     userName: 'UserA',
+     sessionPasscode: 'abc123',
+     features: ['chat', 'users', 'settings']
+     }
+     var sessionContainer = document.getElementById('sessionContainer')
+     console.log(sessionContainer)
+     console.log("works")
+     console.log(config)
+
+ 
     function testResults(form) {
    console.log(generateSignature(form.clientID.value, form.clientSecret.value, 'Test Session', 1))
-    
+     config.videoSDKJWT = generateSignature(form.clientID.value, form.clientSecret.value, 'Test Session', 1)
+    window.uitoolkitWindow.joinSession(sessionContainer, config)
 }
 </script>
   
@@ -81,7 +77,7 @@ return sdkJWT
             <input type="button" name="button" value="Click" onClick="testResults(this.form)">
         </form>
         </div>
-        <!-- <div id='sessionContainer' onload="doThings()"></div> -->
+        <div id='sessionContainer' onload="doThings()"></div>
     </main>
  
     <!-- Footer Section -->
