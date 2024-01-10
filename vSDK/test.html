@@ -39,8 +39,9 @@ const sdkJWT = window.KJUR.jws.JWS.sign('HS256', sHeader, sPayload, sdkSecret)
 return sdkJWT
 }
 
+function doThings() {
  var config = {
-     videoSDKJWT: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfa2V5IjoiM0VaWW5STDRtMnNnaUVvY1N2VHY1SHdwbjBQUXo1SzNWQjVLIiwiaWF0IjoxNzA0Mzk4ODE3LCJleHAiOjE3MDQ0MDI0MTcsInRwYyI6IkNvb2wgQ2FycyIsInVzZXJfaWRlbnRpdHkiOiJ1c2VyMTIzIiwic2Vzc2lvbl9rZXkiOiJzZXNzaW9uMTIzIiwicm9sZV90eXBlIjoxfQ.F0Q6I14bbU_9j8jeCzUUalGvSw2h2xd7j2ghOPEhrZg',
+     videoSDKJWT: '',
      sessionName: 'SessionA',
      userName: 'UserA',
      sessionPasscode: 'abc123',
@@ -51,7 +52,7 @@ return sdkJWT
      console.log("works")
      console.log(config)
 
- 
+    }
     function testResults(form) {
    console.log(generateSignature(form.clientID.value, form.clientSecret.value, 'Test Session', 1))
      config.videoSDKJWT = generateSignature(form.clientID.value, form.clientSecret.value, 'Test Session', 1)
