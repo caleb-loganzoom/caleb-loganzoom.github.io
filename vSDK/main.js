@@ -29,6 +29,3 @@ function generateSignature(sdkKey, sdkSecret, sessionName, role) {
 
 
 
-function testResults(form) {
-    console.log(generateSignature(form.clientID.value, form.clientSecret.value, 'Test Session', 1))
-}
