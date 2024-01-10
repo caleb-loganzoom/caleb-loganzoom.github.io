@@ -27,5 +27,6 @@ function generateSignature(sdkKey, sdkSecret, sessionName, role) {
 
 
 
+module.exports = {generateSignature}
 
 
