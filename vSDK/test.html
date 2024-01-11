@@ -42,22 +42,22 @@ return sdkJWT
 }
 
 function doThings() {
- var config = {
+config = {
      videoSDKJWT: '',
      sessionName: 'SessionA',
      userName: 'UserA',
      sessionPasscode: 'abc123',
-     features: ['chat', 'users', 'settings']
+     features: ['video', 'audio', 'share', 'chat', 'users', 'settings']
      }
-     var sessionContainer = document.getElementById('sessionContainer')
+  sessionContainer = document.getElementById('sessionContainer')
      console.log(sessionContainer)
      console.log("works")
      console.log(config)
 
     }
     function testResults(form) {
-   console.log(generateSignature(form.clientID.value, form.clientSecret.value, 'Test Session', 1))
-     config.videoSDKJWT = generateSignature(form.clientID.value, form.clientSecret.value, 'Test Session', 1)
+   console.log(generateSignature(form.clientID.value, form.clientSecret.value, 'sessionA', 0))
+     config.videoSDKJWT = generateSignature(form.clientID.value, form.clientSecret.value, 'sessionA', 0)
     uitoolkit.joinSession(sessionContainer, config)
 }
 </script>
