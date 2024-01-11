@@ -18,8 +18,14 @@
  
 <body>
 <script>
-    var config
-    var sessionContainer
+   config = {
+     videoSDKJWT: '',
+     sessionName: 'SessionA',
+     userName: 'UserA',
+     sessionPasscode: 'abc123',
+     features: ['video', 'audio', 'share', 'chat', 'users', 'settings']
+     }
+  sessionContainer = document.getElementById('sessionContainer')
  function generateSignature(sdkKey, sdkSecret, sessionName, role) {
 
 const iat = Math.round(new Date().getTime() / 1000) - 30
@@ -80,7 +86,7 @@ config = {
             <input type="button" name="button" value="Click" onClick="testResults(this.form)">
         </form>
         </div>
-        <div id='sessionContainer' onload="doThings()"></div>
+        <div id='sessionContainer'></div>
     </main>
  
     <!-- Footer Section -->
