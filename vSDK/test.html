@@ -64,6 +64,7 @@ config = {
     function testResults(form) {
    console.log(generateSignature(form.clientID.value, form.clientSecret.value, 'sessionA', 0))
      config.videoSDKJWT = generateSignature(form.clientID.value, form.clientSecret.value, 'sessionA', 0)
+     sessionContainer = document.getElementById('sessionContainer')
     uitoolkit.joinSession(sessionContainer, config)
 }
 </script>
