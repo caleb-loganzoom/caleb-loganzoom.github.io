@@ -49,7 +49,7 @@ return sdkJWT
 function doThings() {
 config = {
      videoSDKJWT: '',
-     sessionName: 'SessionA',
+     sessionName: 'sessionA',
      userName: 'UserA',
      features: ['video', 'audio', 'share', 'chat', 'users', 'settings']
      }
@@ -78,9 +78,9 @@ config = {
     <main class="body_sec">
         <div id='data'>
             <form name="vSDKData" action="" method="GET">
-            <label for="fname">Client ID:</label><br>
+            <label for="fname">SDK Key:</label><br>
             <input type="text" id="clientID" name="fname"><br>
-            <label for="lname">Client Secret:</label><br>
+            <label for="lname">SDK Secret:</label><br>
             <input type="text" id="clientSecret" name="lname"><br><br>
             <input type="button" name="button" value="Click" onClick="testResults(this.form)">
         </form>
