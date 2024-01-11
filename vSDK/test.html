@@ -21,7 +21,7 @@
    config = {
      videoSDKJWT: '',
      sessionName: 'sessionA',
-     userName: 'UserA',
+     userName: Math.floor(Math.random() * 1000).toString(),
      features: ['video', 'audio', 'share', 'chat', 'users', 'settings']
      }
   sessionContainer = document.getElementById('sessionContainer')
@@ -46,19 +46,7 @@ const sdkJWT = window.KJUR.jws.JWS.sign('HS256', sHeader, sPayload, sdkSecret)
 return sdkJWT
 }
 
-function doThings() {
-config = {
-     videoSDKJWT: '',
-     sessionName: 'sessionA',
-     userName: 'UserA',
-     features: ['video', 'audio', 'share', 'chat', 'users', 'settings']
-     }
-  sessionContainer = document.getElementById('sessionContainer')
-     console.log(sessionContainer)
-     console.log("works")
-     console.log(config)
 
-    }
     function testResults(form) {
    console.log(generateSignature(form.clientID.value, form.clientSecret.value, 'sessionA', 0))
      config.videoSDKJWT = generateSignature(form.clientID.value, form.clientSecret.value, 'sessionA', 0)
@@ -81,7 +69,7 @@ config = {
             <label for="fname">SDK Key:</label><br>
             <input type="text" id="clientID" name="fname"><br>
             <label for="lname">SDK Secret:</label><br>
-            <input type="text" id="clientSecret" name="lname"><br><br>
+            <input type="text" id="clientSecret" name="lname"><br>
             <input type="button" name="button" value="Click" onClick="testResults(this.form)">
         </form>
         </div>
