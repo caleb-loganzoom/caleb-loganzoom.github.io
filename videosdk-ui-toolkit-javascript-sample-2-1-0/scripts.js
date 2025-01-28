@@ -20,28 +20,7 @@ var role = 1
 window.getVideoSDKJWT = getVideoSDKJWT
 
 function getVideoSDKJWT() {
-    document.getElementById('join-flow').style.display = 'none'
-
-    fetch(authEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            sessionName:  config.sessionName,
-            role: role,
-        })
-    }).then((response) => {
-        return response.json()
-    }).then((data) => {
-        if(data.signature) {
-            console.log(data.signature)
-            config.videoSDKJWT = data.signature
-            joinSession()
-        } else {
-            console.log(data)
-        }
-    }).catch((error) => {
-        console.log(error)
-    })
+    joinSession()
 }
 
 function joinSession() {
