@@ -8,7 +8,7 @@ var config = {
     userName: 'JavaScript',
     sessionPasscode: '123',
     features: ['video', 'audio', 'settings', 'users', 'chat', 'share'],
-    options: { init: {enforceVirtualBackground: true}, audio: {}, video: {virtualBackground: { cropped: true, imageUrl:'https://images.unsplash.com/photo-1715490187538-30a365fa05bd?q=80&w=1945&auto=format&fit=crop'}}, share: {}},
+    options: { init: {enforceVirtualBackground: true}, audio: {}, video: {}, share: {}},
     virtualBackground: {
        allowVirtualBackground: true,
        allowVirtualBackgroundUpload: true,
