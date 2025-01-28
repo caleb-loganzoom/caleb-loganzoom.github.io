@@ -11,12 +11,17 @@
         import uitoolkit from './@zoom/videosdk-ui-toolkit/index.js'
     
      var config = {
-     videoSDKJWT: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfa2V5IjoiM0VaWW5STDRtMnNnaUVvY1N2VHY1SHdwbjBQUXo1SzNWQjVLIiwiaWF0IjoxNzA0Mzk4ODE3LCJleHAiOjE3MDQ0MDI0MTcsInRwYyI6IkNvb2wgQ2FycyIsInVzZXJfaWRlbnRpdHkiOiJ1c2VyMTIzIiwic2Vzc2lvbl9rZXkiOiJzZXNzaW9uMTIzIiwicm9sZV90eXBlIjoxfQ.F0Q6I14bbU_9j8jeCzUUalGvSw2h2xd7j2ghOPEhrZg',
+     videoSDKJWT: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfa2V5IjoiM0VaWW5STDRtMnNnaUVvY1N2VHY1SHdwbjBQUXo1SzNWQjVLIiwicm9sZV90eXBlIjoxLCJ0cGMiOiJTZXNzaW9uQSIsImlhdCI6MTczODA3NzgwOCwiZXhwIjoxNzM4MDgxNDA4fQ.QFu2LoRiMo7y0PRRtlYA9KOdeGvwpiUfeMyzkDNkB8w',
      sessionName: 'SessionA',
      userName: 'UserA',
      sessionPasscode: 'abc123',
-     features: ['chat', 'users', 'settings']
-     }
+features: ['preview', 'video', 'audio', 'share', 'chat', 'users', 'settings'],
+  options: { init: {}, audio: {}, video: {}, share: {}},
+  virtualBackground: {
+    allowVirtualBackground: false,
+    allowVirtualBackgroundUpload: false,
+    virtualBackgrounds: ['blur']
+  }
      var sessionContainer = document.getElementById('sessionContainer')
      console.log(sessionContainer)
      console.log("works")
